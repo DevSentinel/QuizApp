@@ -1,0 +1,81 @@
+body {
+    color: #fff
+}
+
+.choice-container {
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    font-size: 3rem;
+    min-width: 80rem;
+
+    background-image: #E100FF;  /* fallback for old browsers */
+    background-image: -webkit-linear-gradient(to left, #E100FF, #E100FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to left, #E100FF, #3b0075); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    background-position: right center; /* change the direction of the change here */
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding:2rem;
+    width: 100%;   
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11,223,36) 0%, rgb(41, 432, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230,29,29,1) 0%, rgb(224,11,11,1) 100%);
+}
+
+/* HUD */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#ProgressBar {
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+    background: #b09cba;
+    margin-top: 2rem;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+#ProgressBarFull {
+    width: 0%;
+    height: 100%;
+    background: #590095;
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}

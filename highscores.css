@@ -1,0 +1,148 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    background-color: rgb(10, 10, 10);
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+body {
+    color: white
+}
+
+@keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+* {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#HighScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 10.4rem;
+    margin-bottom: 0rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 > .magic {
+    display: inline-block;
+    position: relative;
+}
+  
+h1 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+}
+  
+h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+}
+  
+h1 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+}
+  
+h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#home-btn {
+    background-image: #7F00FF;  /* fallback for old browsers */
+    background-image: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+#home-btn:hover {
+    cursor: pointer;
+    background-position: right center; /* change the direction of the change here */
+}
