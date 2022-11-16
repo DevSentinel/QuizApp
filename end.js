@@ -30,5 +30,5 @@ SaveHighScore = e => {
     HighScores.splice(5)
 
     localStorage.setItem("HighScores", JSON.stringify(HighScores))
-    window.location.assign('/')
+    window.location.assign('https://devsentinel.github.io/QuizApp/')
 }
